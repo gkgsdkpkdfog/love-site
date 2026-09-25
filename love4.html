@@ -1,0 +1,1010 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>для моей любимой ❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(circle at top, #641b4e, transparent 45%),
+        linear-gradient(135deg, #100714, #29102e, #100714);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 35px 20px 50px;
+
+    text-align: center;
+
+}
+
+
+.page {
+    display: none;
+
+    animation: appear .35s ease;
+}
+
+
+.page.active {
+    display: block;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.heart {
+
+    font-size: 65px;
+
+    margin-top: 10px;
+
+    animation: beat 1.2s infinite;
+
+}
+
+
+@keyframes beat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.17);
+    }
+
+}
+
+
+h1 {
+
+    font-size: 29px;
+
+    margin: 12px 0;
+
+}
+
+
+.subtitle {
+
+    color: #ffd9ec;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+
+}
+
+
+.buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 17px 15px;
+
+    border-radius: 19px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+    transition: transform .15s;
+
+}
+
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+
+/* цвета */
+
+.red {
+    background: linear-gradient(90deg,#e91e63,#ff4f91);
+}
+
+.purple {
+    background: linear-gradient(90deg,#8e24aa,#ce5cff);
+}
+
+.blue {
+    background: linear-gradient(90deg,#3949ab,#6573ff);
+}
+
+.pink {
+    background: linear-gradient(90deg,#ec407a,#ff80ab);
+}
+
+.orange {
+    background: linear-gradient(90deg,#f4511e,#ff8a50);
+}
+
+.dark {
+    background: linear-gradient(90deg,#37474f,#607d8b);
+}
+
+.back {
+
+    background: rgba(255,255,255,.12);
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+
+    box-shadow: none;
+
+}
+
+
+/* текст */
+
+.message {
+
+    display: none;
+
+    margin-top: 22px;
+
+    padding: 23px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    color: #ffe4f0;
+
+    line-height: 1.75;
+
+    font-size: 16px;
+
+    text-align: left;
+
+    animation: appear .4s ease;
+
+}
+
+
+.message h2 {
+
+    color: white;
+
+    text-align: center;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer {
+
+    margin-top: 28px;
+
+    color: #c99ab7;
+
+    font-size: 13px;
+
+}
+
+
+/* сердечки */
+
+.floating {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation: fly 5s linear forwards;
+
+    z-index: 100;
+
+}
+
+
+@keyframes fly {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- ===================== -->
+<!-- ГЛАВНОЕ МЕНЮ -->
+<!-- ===================== -->
+
+<div id="home" class="page active">
+
+    <div class="heart">❤️</div>
+
+    <h1>для моей любимой</h1>
+
+    <div class="subtitle">
+
+        я сделал тебе кое-что маленькое<br>
+
+        надеюсь ты улыбнёшься 🥺❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="red"
+        onclick="openPage('love')">
+
+            ❤️ моя любовь
+
+        </button>
+
+
+        <button class="purple"
+        onclick="openPage('sad')">
+
+            🥺 когда тебе грустно
+
+        </button>
+
+
+        <button class="blue"
+        onclick="openPage('miss')">
+
+            🫂 если скучаешь
+
+        </button>
+
+
+        <button class="pink"
+        onclick="openPage('kiss')">
+
+            💋 поцелуй от меня
+
+        </button>
+
+
+        <button class="orange"
+        onclick="openPage('night')">
+
+            🌙 перед сном
+
+        </button>
+
+
+        <button class="dark"
+        onclick="openPage('secret')">
+
+            🔐 секрет
+
+        </button>
+
+    </div>
+
+
+    <div class="footer">
+
+        сделал специально для тебя ❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- МОЯ ЛЮБОВЬ -->
+<!-- ===================== -->
+
+<div id="love" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>❤️ моя любовь</h1>
+
+
+    <div class="subtitle">
+
+        выбери то, что хочешь узнать ❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="red"
+        onclick="showMessage('love1')">
+
+            ❤️ что я чувствую
+
+        </button>
+
+
+        <button class="pink"
+        onclick="showMessage('love2')">
+
+            💗 почему ты мне дорога
+
+        </button>
+
+
+        <button class="purple"
+        onclick="showMessage('love3')">
+
+            🥺 что я хочу тебе сказать
+
+        </button>
+
+    </div>
+
+
+    <div id="love1" class="message">
+
+        <h2>❤️ что я чувствую</h2>
+
+        я просто хочу чтобы ты знала что я правда очень сильно тебя люблю, иногда я могу где то затупить или неправильно что то сказать, но мои чувства к тебе от этого вообще не меняются
+
+        <br><br>
+
+        ты для меня очень важный человек и я правда хочу быть рядом с тобой, мне хочется делиться с тобой своими днями, своими мыслями и вообще всем что у меня происходит
+
+    </div>
+
+
+    <div id="love2" class="message">
+
+        <h2>💗 почему ты мне дорога</h2>
+
+        ты стала для меня человеком без которого я уже не представляю свою жизнь
+
+        <br><br>
+
+        мне нравится с тобой разговаривать, смеяться, просто проводить время, даже какие то обычные моменты с тобой для меня становятся особенными
+
+        <br><br>
+
+        мне просто хорошо когда ты рядом ❤️
+
+    </div>
+
+
+    <div id="love3" class="message">
+
+        <h2>🥺 что я хочу тебе сказать</h2>
+
+        любимая я не обещаю что всегда буду идеальным, потому что я обычный человек и тоже могу ошибаться
+
+        <br><br>
+
+        но я хочу всегда стараться ради нас, хочу чтобы мы могли всё решать вместе и чтобы несмотря ни на что оставались рядом друг с другом
+
+        <br><br>
+
+        я правда очень сильно тебя люблю ❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- КОГДА ГРУСТНО -->
+<!-- ===================== -->
+
+<div id="sad" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>🥺 когда тебе грустно</h1>
+
+
+    <div class="subtitle">
+
+        если тебе сейчас плохо, открой что-нибудь ❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="purple"
+        onclick="showMessage('sad1')">
+
+            🥺 прочитай меня
+
+        </button>
+
+
+        <button class="blue"
+        onclick="showMessage('sad2')">
+
+            🫂 обнимашка
+
+        </button>
+
+    </div>
+
+
+    <div id="sad1" class="message">
+
+        <h2>🥺 я рядом</h2>
+
+        если тебе сейчас плохо или грустно, просто помни что ты не одна
+
+        <br><br>
+
+        у тебя есть я и я всегда готов тебя выслушать, даже если ты просто хочешь помолчать со мной
+
+        <br><br>
+
+        мне всё равно хочется быть рядом с тобой ❤️
+
+    </div>
+
+
+    <div id="sad2" class="message">
+
+        <h2>🫂 иди сюда</h2>
+
+        если бы я сейчас был рядом я бы просто обнял тебя и не отпускал пока тебе не станет хоть немного лучше
+
+        <br><br>
+
+        так что считай что это моя виртуальная обнимашка
+
+        <br><br>
+
+        🫂❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- ЕСЛИ СКУЧАЕШЬ -->
+<!-- ===================== -->
+
+<div id="miss" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>🫂 если скучаешь</h1>
+
+
+    <div class="subtitle">
+
+        нажми на кнопку ❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="blue"
+        onclick="showMessage('miss1')">
+
+            🥺 я тоже скучаю
+
+        </button>
+
+
+        <button class="purple"
+        onclick="showMessage('miss2')">
+
+            🫂 будь рядом
+
+        </button>
+
+    </div>
+
+
+    <div id="miss1" class="message">
+
+        <h2>🥺 я тоже скучаю</h2>
+
+        если ты сейчас скучаешь по мне, то знай что я тоже по тебе скучаю
+
+        <br><br>
+
+        иногда хочется просто взять тебя за руку, обнять и сидеть рядом с тобой вообще ничего не делая
+
+        <br><br>
+
+        лишь бы ты была рядом ❤️
+
+    </div>
+
+
+    <div id="miss2" class="message">
+
+        <h2>🫂 будь рядом</h2>
+
+        мне не обязательно чтобы происходило что то особенное
+
+        <br><br>
+
+        мне просто нравится когда ты рядом со мной
+
+        <br><br>
+
+        даже если мы просто сидим и занимаемся каждый своим, мне всё равно хорошо потому что ты рядом ❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- ПОЦЕЛУЙ -->
+<!-- ===================== -->
+
+<div id="kiss" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>💋 поцелуй от меня</h1>
+
+
+    <div class="subtitle">
+
+        тут без вариантов 😌
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="pink"
+        onclick="showMessage('kiss1'); createHearts();">
+
+            💋 получить поцелуй
+
+        </button>
+
+
+        <button class="red"
+        onclick="showMessage('kiss2'); createHearts();">
+
+            😌 ещё один
+
+        </button>
+
+    </div>
+
+
+    <div id="kiss1" class="message">
+
+        <h2>💋 ловииии</h2>
+
+        это тебе самый большой поцелуй который можно отправить через экран 💋❤️
+
+        <br><br>
+
+        а настоящий я потом сам отдам 😌
+
+    </div>
+
+
+    <div id="kiss2" class="message">
+
+        <h2>💋 ну ладно</h2>
+
+        раз одного тебе мало тогда держи ещё один
+
+        <br><br>
+
+        💋💋💋❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- ПЕРЕД СНОМ -->
+<!-- ===================== -->
+
+<div id="night" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>🌙 перед сном</h1>
+
+
+    <div class="subtitle">
+
+        открой когда будешь ложиться спать ❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="orange"
+        onclick="showMessage('night1')">
+
+            🌙 спокойной ночи
+
+        </button>
+
+
+        <button class="purple"
+        onclick="showMessage('night2')">
+
+            🥺 ещё кое что
+
+        </button>
+
+    </div>
+
+
+    <div id="night1" class="message">
+
+        <h2>🌙 спокойной ночи, любимая</h2>
+
+        я хочу чтобы ты сегодня спокойно уснула и не думала ни о чём плохом
+
+        <br><br>
+
+        просто знай что есть человек который очень тебя любит и который счастлив что ты у него есть
+
+        <br><br>
+
+        сладких снов моя любимая ❤️
+
+    </div>
+
+
+    <div id="night2" class="message">
+
+        <h2>❤️ перед сном</h2>
+
+        если ты читаешь это перед сном, то я хочу чтобы последнее о чём ты подумала сегодня было то что тебя очень сильно любят
+
+        <br><br>
+
+        спокойной ночи моя хорошая 🥺❤️
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================== -->
+<!-- СЕКРЕТ -->
+<!-- ===================== -->
+
+<div id="secret" class="page">
+
+    <button class="back"
+    onclick="openPage('home')">
+
+        ← назад
+
+    </button>
+
+
+    <h1>🔐 секрет</h1>
+
+
+    <div class="subtitle">
+
+        ну раз ты сюда дошла... 😭
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="dark"
+        onclick="showMessage('secret1'); createHearts();">
+
+            🔐 открыть секрет
+
+        </button>
+
+    </div>
+
+
+    <div id="secret1" class="message">
+
+        <h2>❤️ самое главное</h2>
+
+        если ты дошла до этого места, значит ты реально всё посмотрела 😭
+
+        <br><br>
+
+        поэтому скажу тебе самое главное
+
+        <br><br>
+
+        я очень сильно тебя люблю, моя любимая
+
+        <br><br>
+
+        мне правда очень повезло что именно ты появилась в моей жизни
+
+        <br><br>
+
+        я хочу чтобы у нас было ещё очень много моментов, воспоминаний, смеха, обнимашек и всего нашего
+
+        <br><br>
+
+        я люблю тебя ❤️
+
+        <br><br>
+
+        очень сильно
+
+        <br><br>
+
+        и надеюсь ты это всегда будешь помнить 🥺
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+function openPage(page) {
+
+    document
+        .querySelectorAll(".page")
+        .forEach(p => {
+
+            p.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById(page)
+        .classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+function showMessage(id) {
+
+    document
+        .querySelectorAll(".message")
+        .forEach(m => {
+
+            m.style.display = "none";
+
+        });
+
+
+    document
+        .getElementById(id)
+        .style.display = "block";
+
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+
+}
+
+
+function createHearts() {
+
+    const emojis = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💘",
+        "💜",
+        "🥺"
+    ];
+
+
+    for (let i = 0; i < 20; i++) {
+
+        setTimeout(() => {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.className =
+                "floating";
+
+
+            heart.innerHTML =
+                emojis[
+                    Math.floor(
+                        Math.random() *
+                        emojis.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.animationDuration =
+                (3 + Math.random() * 3) + "s";
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 6000);
+
+
+        }, i * 100);
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```
